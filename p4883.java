@@ -1,3 +1,5 @@
+package samsung01;
+
 import java.util.Scanner;
 
 public class p4883 {
@@ -43,8 +45,8 @@ public class p4883 {
 			
 			for (int i = 1; i < N; i++) {
 				D[i][0] = Node[i][0] + Math.min(D[i-1][0], D[i-1][1]);
-				D[i][1] = Node[i][1] + Math.min(Math.min(D[i-1][0], D[i-1][1]), D[i-1][2]);
-				D[i][2] = Node[i][2] + Math.min(D[i-1][1], D[i-1][2]);
+				D[i][1] = Node[i][1] + Math.min(Math.min(D[i-1][0], D[i-1][1]), Math.min(D[i-1][2], D[i][0]));
+				D[i][2] = Node[i][2] + Math.min(Math.min(D[i-1][1], D[i-1][2]), D[i][1]);
 			}
 			
 //			PrintD();
